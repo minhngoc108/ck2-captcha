@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>Captcha in Javascript</header>
+        <div class="captcha-area">
+            <div class="captcha-img">
+                <img src="captcha-bg-1.png" alt="">
+                <span class="captcha"></span>
+            </div>
+            <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+        </div>
+        <form action="#" class="input-area">
+            <input type="text" placeholder="Enter Captcha" maxlength="6" required>
+            <button class="check-btn">Check</button>
+        </form>
+            <div class="status-txt"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

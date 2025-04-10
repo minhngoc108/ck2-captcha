@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #4db2ec;
+}
+.wrapper {
+    width: 485px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 22px 30px 40px;
+}
+.wrapper header {
+    color: #4db2ec;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper .captcha-area {
+    display: flex;
+    height: 65px;
+    margin: 30px 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.captcha-area .captcha-img {
+    height: 100%;
+    width: 345px;
+    user-select: none;
+    position: relative;
+    background-color: #bcbcbc;
+    border-radius: 5px;
+}
+.captcha-img img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.captcha-img .captcha {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 10px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 2px #a9a9a9;
+    font-family: 'Noto Serif', serif;
+}
+.wrapper button {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #4db2ec;
+    border-radius: 5px;
+}
+.captcha-area .reload-btn {
+    width: 75px;
+    height: 100%;
+    font-size: 25px;
+}
+.wrapper .input-area {
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+.input-area input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+.input-area input:is(:focus, :valid) {
+    padding-left: 19px;
+    border: 2px solid #4db2ec;
+}
+.input-area .check-btn {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    font-size: 17px;
+    height: 45px;
+    padding: 0 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.input-area input:valid + .check-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+.wrapper .status-txt {
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 -5px 0;
+}
