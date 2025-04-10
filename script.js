@@ -26,6 +26,7 @@ checkBtn.addEventListener("click", e => {
     e.preventDefault();  //prevent buttong from doing its default behavior
     statusTxt.style.display = "block";
     let inputVal = inputField.value.split('').join(' ');
+    inputVal = " " + inputVal;
     // the above is to add space to answer because space has been added while generating captcha
     if (inputVal == captcha.textContent) {
         statusTxt.style.color = "#4db2ec";
