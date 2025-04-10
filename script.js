@@ -29,7 +29,7 @@ checkBtn.addEventListener("click", e => {
     // the above is to add space to answer because space has been added while generating captcha
     if (inputVal == captcha.textContent) {
         statusTxt.style.color = "#4db2ec";
-        statusTxt = "Nice! You don't appear to be a robot.";
+        statusTxt.textContent = "Nice! You don't appear to be a robot.";
         setTimeout(() => {  //remove user-entered value and reset captcha after 4s
             statusTxt.style.display = "none";
             inputField.value = "";
@@ -38,6 +38,6 @@ checkBtn.addEventListener("click", e => {
         }, 4000); 
     } else {
         statusTxt.style.color = "#ff0000"
-        statusTxt = "Captcha not matched. Please try again.";
+        statusTxt.textContent = "Captcha not matched. Please try again.";
     }
 })
